@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import connectButton.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainJarTestController">
+   <children>
+      <ConnectButton01 fx:id="connBtnCtrl01" layoutX="-140.0" layoutY="-106.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <ConnectButton02 fx:id="connBtnCtrl02" layoutX="76.0" layoutY="-171.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="50.0" />
+   </children>
+</AnchorPane>
