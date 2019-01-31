@@ -9,6 +9,8 @@ import eventBus.FXEventBus;
 import eventBus.events.ConnectionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import textFieldSmart.TextFieldSmart;
+import textFieldSmart.validators.Ip4Validator;
 
 public class MainJarTestController implements Initializable {
 	public  final EventBus eventBus = new FXEventBus();
@@ -16,7 +18,9 @@ public class MainJarTestController implements Initializable {
 	public ConnectButtonController connBtnCtrl01;
 	@FXML
 	public ConnectButtonController connBtnCtrl02;
-
+	@FXML
+	public TextFieldSmart tfs;
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		System.out.println("MainController initialize");
@@ -42,6 +46,8 @@ public class MainJarTestController implements Initializable {
         connBtnCtrl01.setStatesName("Connect TCAS", "Disconnect TCAS");
         connBtnCtrl02.setStatesName("Connect TCAS", "Disconnect TCAS");
         
+        tfs.setValidator(new Ip4Validator());
+        tfs.setText("1.2.3.456");
 	}
 
 	public void ping() {
