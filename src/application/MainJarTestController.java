@@ -48,6 +48,9 @@ public class MainJarTestController implements Initializable {
         
         tfs.setValidator(new Ip4Validator());
         tfs.setText("1.2.3.456");
+        tfs.setEventBus(eventBus);
+        tfs.setConnEventEnabled(true);
+        tfs.setConnEventInverted(true);
 	}
 
 	public void ping() {
