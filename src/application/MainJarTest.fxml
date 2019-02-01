@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import buttonOnBus.*?>
 <?import textFieldSmart.*?>
 <?import connectButton.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="184.0" prefWidth="246.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainJarTestController">
+<AnchorPane prefHeight="222.0" prefWidth="246.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainJarTestController">
    <children>
       <ConnectButton01 fx:id="connBtnCtrl01" layoutX="14.0" layoutY="21.0" prefHeight="38.0" prefWidth="206.0" />
       <ConnectButton02 fx:id="connBtnCtrl02" layoutX="14.0" layoutY="72.0" prefHeight="38.0" prefWidth="206.0" />
-      <TextFieldSmart fx:id="tfs" layoutX="20.0" layoutY="131.0" prefHeight="25.0" prefWidth="193.0" />
+      <TextFieldSmart fx:id="tfs" layoutX="20.0" layoutY="127.0" prefHeight="25.0" prefWidth="194.0" />
+      <ButtonOnBus fx:id="btnOnBus" layoutX="14.0" layoutY="170.0" prefHeight="38.0" prefWidth="206.0" />
    </children>
 </AnchorPane>

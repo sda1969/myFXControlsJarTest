@@ -3,6 +3,7 @@ package application;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import buttonOnBus.ButtonOnBus;
 import connectButton.ConnectButtonController;
 import eventBus.EventBus;
 import eventBus.FXEventBus;
@@ -20,6 +21,8 @@ public class MainJarTestController implements Initializable {
 	public ConnectButtonController connBtnCtrl02;
 	@FXML
 	public TextFieldSmart tfs;
+	@FXML
+	public ButtonOnBus btnOnBus;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -51,6 +54,13 @@ public class MainJarTestController implements Initializable {
         tfs.setEventBus(eventBus);
         tfs.setConnEventEnabled(true);
         tfs.setConnEventInverted(true);
+        
+        btnOnBus.setEventBus(eventBus);
+        btnOnBus.setConnEventInverted(false);
+        btnOnBus.setText("12345");
+        btnOnBus.setButtonAction(()->{
+        	System.out.println("btnOnBus fired..");
+        });
 	}
 
 	public void ping() {
