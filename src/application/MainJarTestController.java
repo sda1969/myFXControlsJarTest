@@ -2,6 +2,7 @@ package application;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.prefs.Preferences;
 
 import buttonOnBus.ButtonOnBus;
 import connectButton.ConnectButtonController;
@@ -15,6 +16,7 @@ import textFieldSmart.validators.Ip4Validator;
 
 public class MainJarTestController implements Initializable {
 	public  final EventBus eventBus = new FXEventBus();
+	public  final Preferences localPrefs = Preferences.userRoot().node("MainJarTestController.class");
 	@FXML
 	public ConnectButtonController connBtnCtrl01;
 	@FXML
@@ -50,7 +52,7 @@ public class MainJarTestController implements Initializable {
         connBtnCtrl02.setStatesName("Connect TCAS", "Disconnect TCAS");
         
         tfs.setValidator(new Ip4Validator());
-        tfs.setText("1.2.3.456");
+        tfs.setPreference("1.2.3.4", localPrefs);
         tfs.setEventBus(eventBus);
         tfs.setConnEventEnabled(true);
         tfs.setConnEventInverted(true);
