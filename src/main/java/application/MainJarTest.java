@@ -1,7 +1,5 @@
 package application;
 	
-import eventBus.EventBus;
-import eventBus.FXEventBus;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,7 +13,7 @@ public class MainJarTest extends Application {
 		try {
             //---- для отладки того же компонента но уже из внешнего jar
 			FXMLLoader mainJarTestLoader = new FXMLLoader();
-			mainJarTestLoader.setLocation(getClass().getResource("MainJarTest.fxml"));
+			mainJarTestLoader.setLocation(getClass().getResource("/application/MainJarTest.fxml"));
 			Parent root = mainJarTestLoader.load();
 			MainJarTestController mainCtrl = mainJarTestLoader.getController();
 			mainCtrl.ping();
